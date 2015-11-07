@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+
+		<title>Projekt</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- Font Awesome -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+		<!-- <link rel="stylesheet" href="../public/css/main.less" type="text/less"> -->
+		<link rel="stylesheet" href="../public/css/style.css" type="text/css">
+
+		<!-- JS LESS -->
+		<!-- <script src="../public/js/less.min.js"></script>-->
+		<!-- jQuery -->
+		<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+		<!-- moving background -->
+		<script src="../public/js/jquery.interactive_bg.min.js"></script>
+		<script src="../public/js/script.js"></script>
+		
+
+	</head>
+	<body>
+		<div class="main-container bg" data-ibg-bg="../public/img/bg1.jpg">
+			<div id="main-content">
+				<div class="menu-icon">
+					<i class="fa fa-bars"></i>
+				</div>
+				<div id="show-menu">
+					blablabla
+				</div>
+				<div class="header">
+						<h2> HOTEL 530 </h2>
+						<h4> W samym środku gór </h4>
+					
+
+					<div id="main-menu">
+						<ul>
+							<li><a href="#">Oferta</a></li>
+							<li><a href="#">Wolne pokoje</a></li>
+							<li><a href="#">Cennik</a></li>
+							<li><a href="#">Galeria</a></li>
+							<li><a href="#">Obsługiwane imprezy</a></li>
+							<li><a href="#">Kontakt</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+		</div>
+				<script>
+			$(document).ready(function(){
+				$(".bg").interactive_bg();
+				$("#btns").interactive_bg({
+   				strength: 10, 
+  				scale: 1.15,
+   				animationSpeed: "100ms",
+   				contain: false,
+   				wrapContent: true      
+ 				});
+			});
+			$(window).resize(function() {
+      		$(".main-container > .ibg-bg").css({
+        	width: $(window).outerWidth(),
+        	height: $(window).outerHeight()
+     		 	});
+    		});
+		</script>
+
+	</body>
+</html>
