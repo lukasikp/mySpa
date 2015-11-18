@@ -8,7 +8,17 @@ body {
   position: relative;
   margin: 0;
   height: 100%;
+  font-family: 'Lato', sans-serif;
 }
+
+h2{
+  font-size: 36px;
+
+}
+h4{
+  font-size: 18px;
+}
+
 
 .main-container {
   height: auto !important;
@@ -20,6 +30,7 @@ body {
 #main-content {
   float: left;
   width: 100%;
+  height: 100%;
   margin: 0 auto;
   position: relative;
 }
@@ -27,6 +38,9 @@ body {
 .header {
   overflow: hidden;
   clear: both;
+  height: 100%;
+  top:0;
+    bottom: 0;
 }
     
 .bg {
@@ -49,7 +63,7 @@ body {
   float: none;
   }
 
-  .menu-icon{
+  #menu-icon{
     position: absolute;
     top: 12%;
     left: 3%;
@@ -62,6 +76,8 @@ body {
     border-radius: 50%;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
+    z-index: 1000;
+    cursor: pointer;
   }
   .menu-icon:hover{
     font-size: 22px;
@@ -70,7 +86,74 @@ body {
   #show-menu{
     position: absolute;
     width: 100%;
-    height: 100%;
-    background-color: red;
+    top:0;
+    bottom: 0;
+    height: 100vh;
+    background-color: #505050;
+    display: block;
+    text-align: center;
+  }
+  .hide {
     left: -100%;
   }
+#show-menu-container{
+  width: 95%;
+  height: 95%;
+  margin: 20px;
+  background-color: #808080;
+  text-align: center;
+}
+
+
+/*widok jednej strony*/
+
+
+/*menu wysuwane*/
+
+#logo-left, #menu{
+  float: left;
+  width: 30%;
+  min-width: 250px;
+}
+#logo-left{
+  margin-top: 250px;
+  margin-left: 0;
+}
+
+#menu{
+  text-align: left;
+  margin-left: 50px;
+}
+#menu h4{
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+#menu ul {
+  list-style: none;
+
+}
+
+#menu ul li {
+  padding: 10px 0 10px 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+#menu ul li a{
+  text-decoration: none;
+  color: #fff;
+}
+
+@media screen and (max-width: 992px){
+  #logo-left{
+    margin-top: 60px;
+  } 
+  #menu ul li {
+  padding: 5px 0 5px 0;
+  font-size: 1.1rem;
+  }
+  #menu h4{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+}
